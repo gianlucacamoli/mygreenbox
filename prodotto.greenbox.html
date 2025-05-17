@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GreenBox – Prodotti</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Exo+2&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.greenbox.css" />
+  <script src="js/script.greenbox.js" defer></script>
+</head>
+<body>
+  <nav>
+    <div class="logo">GreenBox</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="prodotto.greenbox.html" class="active">Prodotto</a></li>
+      <li><a href="shop.greenbox.html">Shop</a></li>
+      <li><a href="team.greenbox.html">Team</a></li>
+      <li><a href="impatto.greenbox.html">Impatto</a></li>
+      <li><a href="finanza.greenbox.html">Finanza</a></li>
+      <li><a href="contatti.greenbox.html">Contatti</a></li>
+    </ul>
+  </nav>
+  
+<div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc" hidden>
+  <div class="modal-content">
+    <h2 id="modalTitle">Titolo messaggio</h2>
+    <p id="modalDesc">Testo del messaggio qui.</p>
+    <button id="modalClose" class="btn">Chiudi</button>
+  </div>
+</div>
+
+  <header class="hero mini-hero">
+    <div class="hero-content">
+      <h1>PRODOTTI GREENBOX</h1>
+      <p>Orto smart e semi biologici per coltivare in casa in modo semplice e moderno.</p>
+    </div>
+  </header>
+
+  <section class="products-section">
+    <h2>I nostri prodotti</h2>
+    <div class="cards-container">
+      <!-- Card 1: Box Smart -->
+      <div class="card">
+        <img src="img/box1.jpg" alt="GreenBox modulo base" />
+        <h3>GreenBox Modulo Base</h3>
+        <p>Box smart modulare per coltivare erbe e insalate in casa.</p>
+        <p class="price">€80,00</p>
+        <button class="btn add-cart" data-name="GreenBox Modulo Base" data-price="80">Aggiungi al carrello</button>
+        
+      </div>
+
+      <!-- Card 2: Semi basilico -->
+      <div class="card">
+        <img src="img/semi_basilico.jpg" alt="Semi di basilico biologico" />
+        <h3>Semi Basilico Biologico</h3>
+        <p>Semi 100% bio per il tuo orto GreenBox. Freschezza assicurata.</p>
+        <p class="price">€4,00</p>
+        <button class="btn add-cart" data-name="Semi Basilico" data-price="4">Aggiungi al carrello</button>
+      </div>
+
+      <!-- Card 3: Semi lattuga -->
+      <div class="card">
+        <img src="img/semi_lattuga.jpg" alt="Semi di lattuga biologica" />
+        <h3>Semi Lattuga Biologica</h3>
+        <p>Ideali per la coltivazione indoor, con resa veloce e sostenibile.</p>
+        <p class="price">€4,00</p>
+        <button class="btn add-cart" data-name="Semi Lattuga" data-price="4">Aggiungi al carrello</button>
+      </div>
+    </div>
+  </section>
+  <section class="slider-section scroll-anim">
+  <h2 class="scroll-anim">Esplora prodotti</h2>
+  <div class="slider">
+    <button class="slider-btn prev">&lt;</button>
+    <div class="slider-track">
+      <img src="img/slide11.jpg" alt="Slide 1" class="slide-img" />
+      <img src="img/slide12.jpg" alt="Slide 2" class="slide-img" />
+      <img src="img/slide13.jpg" alt="Slide 3" class="slide-img" />
+      <img src="img/slide14.jpg" alt="Slide 2" class="slide-img" />
+      <img src="img/slide15.jpg" alt="Slide 3" class="slide-img" />
+      <img src="img/slide16.jpg" alt="Slide 1" class="slide-img" />
+      <img src="img/slide17.jpg" alt="Slide 2" class="slide-img" />
+      <img src="img/slide18.jpg" alt="Slide 3" class="slide-img" />
+      <img src="img/slide19.jpg" alt="Slide 2" class="slide-img" />
+      <img src="img/slide20.jpg" alt="Slide 3" class="slide-img" />
+    </div>
+    <button class="slider-btn next">&gt;</button>
+  </div>
+</section>
+<div class="bottone-team-container">
+  <a href="team.greenbox.html" class="bottone-team">Esplora il team</a>
+</div>
+
+  <section class="faq-section">
+  <h2>Domande Frequenti sui Prodotti</h2>
+  <div class="faq-item">
+    <button class="faq-question" aria-expanded="false">Quali prodotti offrite?</button>
+    <div class="faq-answer" hidden>
+      Offriamo box smart modulari e semi biologici per coltivare facilmente in casa.
+    </div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question" aria-expanded="false">I semi sono biologici?</button>
+    <div class="faq-answer" hidden>
+      Sì, tutti i nostri semi sono certificati 100% biologici e di alta qualità.
+    </div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question" aria-expanded="false">Come si usa il box GreenBox?</button>
+    <div class="faq-answer" hidden>
+      Il box è semplice da usare: inserisci semi, scegli programma tramite app e aspetti la crescita.
+    </div>
+  </div>
+</section>
+
+  <footer>
+    &copy; 2025 GreenBox – Tutti i diritti riservati
+  </footer>
+ 
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GreenBox – Homepage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Exo+2&family=Dancing+Script&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.greenbox.css" />
+  <script src="js/script.greenbox.js" defer></script>
+</head>
+<body>
+  <nav>
+    <div class="logo">GreenBox</div>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="prodotto.greenbox.html">Prodotto</a></li>
+      <li><a href="shop.greenbox.html">Shop</a></li>
+      <li><a href="team.greenbox.html">Team</a></li>
+      <li><a href="impatto.greenbox.html">Impatto</a></li>
+      <li><a href="finanza.greenbox.html">Finanza</a></li>
+      <li><a href="contatti.greenbox.html">Contatti</a></li>
+    </ul>
+  </nav>
+  
+<div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc" hidden>
+  <div class="modal-content">
+    <h2 id="modalTitle">Titolo messaggio</h2>
+    <p id="modalDesc">Testo del messaggio qui.</p>
+    <button id="modalClose" class="btn">Chiudi</button>
+  </div>
+</div>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1>COLTIVA IL TUO BENESSERE</h1>
+      <p>Orto smart, modulare e futuristico per ogni casa.</p>
+      <a href="prodotto.greenbox.html" class="btn">Scopri GreenBox</a>
+    </div>
+  </header>
+
+  <section class="about">
+    <h2>CHI SIAMO</h2>
+    <p>GreenBox nasce da un sogno semplice: riportare natura e benessere in ogni casa, unendo tecnologia e sostenibilità.  
+    Vogliamo rendere la coltivazione accessibile a tutti, anche chi ha poco spazio e poco tempo.</p>
+  </section>
+
+  <section class="what">
+    <h2>COSA FACCIAMO</h2>
+    <p>Progettiamo orti smart, modulari e facili da usare, controllabili tramite app.  
+    Il nostro prodotto principale è un box automatico, con semi biologici e materiali sostenibili.</p>
+  </section>
+  <section class="slider-section scroll-anim">
+  <h2 class="scroll-anim">Esplora GreenBox</h2>
+  <div class="slider">
+    <button class="slider-btn prev">&lt;</button>
+    <div class="slider-track">
+      <img src="img/slide1.jpg" alt="Slide 1" class="slide-img" />
+      <img src="img/slide2.jpg" alt="Slide 2" class="slide-img" />
+      <img src="img/slide3.jpg" alt="Slide 3" class="slide-img" />
+      <img src="img/slide4.jpg" alt="Slide 4" class="slide-img" />
+      <img src="img/slide5.jpg" alt="Slide 5" class="slide-img" />
+      <img src="img/slide6.jpg" alt="Slide 6" class="slide-img" />
+      <img src="img/slide7.jpg" alt="Slide 7" class="slide-img" />
+      <img src="img/slide8.jpg" alt="Slide 8" class="slide-img" />
+      <img src="img/slide9.jpg" alt="Slide 9" class="slide-img" />
+      <img src="img/slide10.jpg" alt="Slide 10" class="slide-img" />
+    </div>
+    <button class="slider-btn next">&gt;</button>
+  </div>
+</section>
+<section class="demo-section scroll-anim">
+  <h2>Come funziona GreenBox</h2>
+  <p>Guarda GreenBox in azione: dalla semina alla raccolta, in modo smart e automatico.</p>
+
+  <video
+    src="img/greenbox_demo3.mp4"
+    class="demo-video"
+    autoplay
+    muted
+    loop
+    playsinline
+    onmouseover="this.pause()"
+    onmouseout="this.play()"
+  ></video>
+</section>
+
+<section class="faq-section">
+  <h2>Domande Frequenti</h2>
+  <div class="faq-item">
+    <button class="faq-question" aria-expanded="false">Come funziona GreenBox?</button>
+    <div class="faq-answer" hidden>
+      GreenBox è un orto smart che ti permette di coltivare facilmente in casa con semi biologici e tecnologia modulare.
+    </div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question" aria-expanded="false">Quali semi posso usare?</button>
+    <div class="faq-answer" hidden>
+      Puoi usare vari semi biologici, come basilico, lattuga e altri erbe aromatiche adatte alla coltivazione indoor.
+    </div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question" aria-expanded="false">Come si pulisce GreenBox?</button>
+    <div class="faq-answer" hidden>
+      La pulizia è semplice: il box è smontabile e i materiali sono facili da lavare con acqua e sapone neutro.
+    </div>
+  </div>
+</section>
+
+  <footer>
+    &copy; 2025 GreenBox – Tutti i diritti riservati
+  </footer>
+
+  <div class="signature">GianlucaCamoli-MyGreenBox</div>
+  
+
+</body>
+</html>

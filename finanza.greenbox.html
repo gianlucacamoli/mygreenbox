@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GreenBox – Finanza</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Exo+2&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.greenbox.css" />
+<style>
+  /* Piccole aggiunte CSS per questa pagina */
+  .finance-section {
+    max-width: 1000px;
+    margin: 3rem auto 5rem;
+    padding: 2rem 1rem;
+    background: rgba(15, 22, 31, 0.55);
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(92, 235, 153, 0.3);
+    backdrop-filter: blur(6px);
+    color: var(--testo);
+  }
+
+  .finance-section h2 {
+    font-family: 'Orbitron', monospace;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--verde);
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+  }
+
+  th, td {
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(92, 235, 153, 0.3);
+    text-align: left;
+  }
+
+  th {
+    background-color: rgba(92, 235, 153, 0.1);
+    color: var(--verde);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  td {
+    color: var(--testo);
+  }
+
+  .chart-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+  }
+
+  canvas {
+    background: rgba(15, 22, 31, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 0 20px var(--verde);
+  }
+
+  .bar-chart, .pie-chart {
+    width: 400px;
+    height: 300px;
+  }
+</style>
+<script src="js/script.greenbox.js" defer></script>
+</head>
+<body>
+<nav>
+  <div class="logo">GreenBox</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="prodotto.greenbox.html">Prodotto</a></li>
+    <li><a href="shop.greenbox.html">Shop</a></li>
+    <li><a href="team.greenbox.html">Team</a></li>
+    <li><a href="impatto.greenbox.html">Impatto</a></li>
+    <li><a href="finanza.greenbox.html" class="active">Finanza</a></li>
+    <li><a href="contatti.greenbox.html">Contatti</a></li>
+  </ul>
+</nav>
+<div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc" hidden>
+  <div class="modal-content">
+    <h2 id="modalTitle">Titolo messaggio</h2>
+    <p id="modalDesc">Testo del messaggio qui.</p>
+    <button id="modalClose" class="btn">Chiudi</button>
+  </div>
+</div>
+
+<header class="hero mini-hero">
+  <div class="hero-content">
+    <h1>LA NOSTRA FINANZA</h1>
+    <p>Dati dettagliati su ricavi, costi e investimenti.</p>
+  </div>
+</header>
+
+<section class="finance-section">
+  <h2>Ricavi</h2>
+  <table>
+    <thead>
+      <tr><th>Prodotto</th><th>Unità</th><th>Prezzo unitario</th><th>Totale</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>GreenBox</td><td>500</td><td>€80,00</td><td>€40.000</td></tr>
+      <tr><td>Capsule bio</td><td>1.500</td><td>€4,00</td><td>€6.000</td></tr>
+      <tr><td><strong>Totale ricavi</strong></td><td></td><td></td><td><strong>€46.000</strong></td></tr>
+    </tbody>
+  </table>
+
+  <h2>Costi Diretti</h2>
+  <table>
+    <thead>
+      <tr><th>Voce</th><th>Unità</th><th>Costo unitario</th><th>Totale</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>GreenBox</td><td>500</td><td>€30,00</td><td>€15.000</td></tr>
+      <tr><td>Capsule</td><td>1.500</td><td>€1,50</td><td>€2.250</td></tr>
+      <tr><td><strong>Totale costi diretti</strong></td><td></td><td></td><td><strong>€17.250</strong></td></tr>
+    </tbody>
+  </table>
+
+  <h2>Costi Fissi</h2>
+  <table>
+    <thead>
+      <tr><th>Voce</th><th>Importo</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Personale</td><td>€12.000</td></tr>
+      <tr><td>Marketing</td><td>€3.000</td></tr>
+      <tr><td>Affitto e utenze</td><td>€2.000</td></tr>
+      <tr><td>Altri costi</td><td>€1.000</td></tr>
+      <tr><td><strong>Totale costi fissi</strong></td><td><strong>€18.000</strong></td></tr>
+    </tbody>
+  </table>
+
+  <h2>Utile stimato</h2>
+  <p style="text-align:center; font-weight:700; font-size:1.3rem; color: var(--verde);">€10.750</p>
+
+  <h2>Investimenti iniziali</h2>
+  <table>
+    <thead>
+      <tr><th>Voce</th><th>Importo</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Prototipi e primo stock</td><td>€8.000</td></tr>
+      <tr><td>Sviluppo App</td><td>€5.000</td></tr>
+      <tr><td>Marketing iniziale</td><td>€2.000</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Ripartizione Marketing Iniziale</h2>
+  <div class="chart-container">
+    <canvas id="barChart" class="bar-chart"></canvas>
+    <canvas id="pieChart" class="pie-chart"></canvas>
+  </div>
+</section>
+<section class="faq-section">
+  <h2>Domande Frequenti sulla Finanza</h2>
+  <div class="faq-item">
+    <button class="faq-question" aria-expanded="false">Quali sono i principali ricavi di GreenBox?</button>
+    <div class="faq-answer" hidden>
+      I ricavi provengono dalla vendita dei box smart e dei semi biologici.
+    </div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question" aria-expanded="false">Come sono distribuiti i costi di marketing?</button>
+    <div class="faq-answer" hidden>
+      Il marketing iniziale è suddiviso in reinvestimenti, incentivi, comunicazione e beneficenza.
+    </div>
+  </div>
+</section>
+<div class="bottone-team-container">
+  <a href="contatti.greenbox.html" class="bottone-team">Contattaci!</a>
+</div>
+
+<footer>
+  &copy; 2025 GreenBox – Tutti i diritti riservati
+</footer>
+
+<script>
+function drawBarChart(ctx) {
+  const data = {
+    labels: ['Ricavi', 'Costi Diretti', 'Costi Fissi', 'Utile stimato'],
+    values: [46000, 17250, 18000, 10750],
+    colors: ['#5CEB99', '#2E7D32', '#388E3C', '#81C784']
+  };
+  const width = ctx.canvas.width;
+  const height = ctx.canvas.height;
+  const padding = 50;
+  const barWidth = (width - padding * 2) / data.values.length * 0.6;
+  const maxValue = Math.max(...data.values);
+  const chartHeight = height - padding * 2;
+
+  ctx.clearRect(0, 0, width, height);
+  ctx.font = '16px Orbitron, monospace';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'bottom';
+
+  // Draw axis line
+  ctx.strokeStyle = '#5CEB99';
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.moveTo(padding, height - padding);
+  ctx.lineTo(width - padding, height - padding);
+  ctx.stroke();
+
+  // Draw bars
+  data.values.forEach((val, i) => {
+    const barHeight = (val / maxValue) * chartHeight;
+    const x = padding + i * ((width - padding * 2) / data.values.length) + ((width - padding * 2) / data.values.length - barWidth) / 2;
+    const y = height - padding - barHeight;
+
+    ctx.fillStyle = data.colors[i];
+    ctx.fillRect(x, y, barWidth, barHeight);
+
+    // Draw value text above bar
+    ctx.fillStyle = '#E0F7F1';
+    ctx.fillText('€' + val.toLocaleString(), x + barWidth / 2, y - 10);
+
+    // Draw label below bar
+    ctx.fillStyle = '#5CEB99';
+    ctx.fillText(data.labels[i], x + barWidth / 2, height - padding + 20);
+  });
+}
+
+function drawPieChart(ctx) {
+  const data = [
+    { label: 'Reinvestito', value: 40, color: '#5CEB99' },
+    { label: 'Incentivi e bonus', value: 30, color: '#2E7D32' },
+    { label: 'Comunicazione', value: 20, color: '#388E3C' },
+    { label: 'Beneficenza ambientale', value: 10, color: '#81C784' }
+  ];
+
+  const width = ctx.canvas.width;
+  const height = ctx.canvas.height;
+  const radius = Math.min(width, height) / 2 - 40;
+  const centerX = width / 2;
+  const centerY = height / 2;
+  let startAngle = 0;
+
+  ctx.clearRect(0, 0, width, height);
+  ctx.font = '14px Orbitron, monospace';
+  ctx.textAlign = 'left';
+  ctx.textBaseline = 'middle';
+
+  data.forEach(slice => {
+    const sliceAngle = (slice.value / 100) * 2 * Math.PI;
+
+    // Draw slice
+    ctx.beginPath();
+    ctx.moveTo(centerX, centerY);
+    ctx.arc(centerX, centerY, radius, startAngle, startAngle + sliceAngle);
+    ctx.closePath();
+    ctx.fillStyle = slice.color;
+    ctx.fill();
+
+    // Draw line and label
+    const midAngle = startAngle + sliceAngle / 2;
+    const textX = centerX + (radius + 20) * Math.cos(midAngle);
+    const textY = centerY + (radius + 20) * Math.sin(midAngle);
+
+    ctx.strokeStyle = slice.color;
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(centerX + radius * Math.cos(midAngle), centerY + radius * Math.sin(midAngle));
+    ctx.lineTo(textX, textY);
+    ctx.stroke();
+
+    ctx.fillStyle = '#E0F7F1';
+    ctx.fillText(`${slice.label} - ${slice.value}%`, textX + 5, textY);
+
+    startAngle += sliceAngle;
+  });
+}
+
+window.onload = () => {
+  const barCanvas = document.getElementById('barChart');
+  const pieCanvas = document.getElementById('pieChart');
+
+  // Nuova funzione resizeCanvas da usare dentro onload
+  function resizeCanvas(canvas) {
+  const parent = canvas.parentElement;
+  const style = getComputedStyle(parent);
+  let width = parseInt(style.width);
+
+  if (width > 400) width = 400; // massima larghezza 400px
+  const height = width * 0.75;  // 4:3 ratio
+
+  canvas.width = width * window.devicePixelRatio;
+  canvas.height = height * window.devicePixelRatio;
+
+  const ctx = canvas.getContext('2d');
+  ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+
+  canvas.style.width = width + 'px';
+  canvas.style.height = height + 'px';
+
+  return ctx;
+}
+
+
+  const resizedBarCtx = resizeCanvas(barCanvas);
+  const resizedPieCtx = resizeCanvas(pieCanvas);
+
+  drawBarChart(resizedBarCtx);
+  drawPieChart(resizedPieCtx);
+};
+
+
+</script>

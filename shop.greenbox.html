@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GreenBox – Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Exo+2&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.greenbox.css" />
+  <script src="js/script.greenbox.js" defer></script>
+</head>
+<body>
+  <nav>
+    <div class="logo">GreenBox</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="prodotto.greenbox.html">Prodotto</a></li>
+      <li><a href="shop.greenbox.html" class="active">Shop</a></li>
+      <li><a href="team.greenbox.html">Team</a></li>
+      <li><a href="impatto.greenbox.html">Impatto</a></li>
+      <li><a href="finanza.greenbox.html">Finanza</a></li>
+      <li><a href="contatti.greenbox.html">Contatti</a></li>
+    </ul>
+  </nav>
+<div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc" hidden>
+  <div class="modal-content">
+    <h2 id="modalTitle">Titolo messaggio</h2>
+    <p id="modalDesc">Testo del messaggio qui.</p>
+    <button id="modalClose" class="btn">Chiudi</button>
+  </div>
+</div>
+
+  <header class="hero mini-hero">
+    <div class="hero-content">
+      <h1>IL TUO CARRELLO</h1>
+      <p>Controlla i prodotti aggiunti e il totale aggiornato in tempo reale.</p>
+    </div>
+  </header>
+
+  <section class="cart-section">
+    <h2>Prodotti nel carrello</h2>
+    <div id="cart-items">
+      <p>Il carrello è vuoto.</p>
+    </div>
+    <div id="cart-total" class="cart-total">Totale: €0,00</div>
+    <button id="checkout-btn" class="btn" disabled>Procedi all'acquisto</button>
+  </section>
+<section class="faq-section">
+  <h2>Domande Frequenti sullo Shop</h2>
+  <div class="faq-item">
+    <button class="faq-question" aria-expanded="false">Come aggiungo prodotti al carrello?</button>
+    <div class="faq-answer" hidden>
+      Clicca sul pulsante “Aggiungi al carrello” nella pagina prodotto per aggiungere articoli.
+    </div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question" aria-expanded="false">Posso rimuovere un prodotto dal carrello?</button>
+    <div class="faq-answer" hidden>
+      Sì, nel carrello puoi cliccare sulla “X” per rimuovere un prodotto.
+    </div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question" aria-expanded="false">Quali metodi di pagamento accettate?</button>
+    <div class="faq-answer" hidden>
+      Al momento il checkout è simulato, ma presto supporteremo vari metodi di pagamento.
+    </div>
+  </div>
+</section>
+
+  <footer>
+    &copy; 2025 GreenBox – Tutti i diritti riservati
+  </footer>
+  
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GreenBox – Contatti</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Exo+2&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.greenbox.css" />
+  <script src="js/script.greenbox.js" defer></script>
+</head>
+<body>
+  <nav>
+    <div class="logo">GreenBox</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="prodotto.greenbox.html">Prodotto</a></li>
+      <li><a href="shop.greenbox.html">Shop</a></li>
+      <li><a href="team.greenbox.html">Team</a></li>
+      <li><a href="impatto.greenbox.html">Impatto</a></li>
+      <li><a href="finanza.greenbox.html">Finanza</a></li>
+      <li><a href="contatti.greenbox.html" class="active">Contatti</a></li>
+    </ul>
+  </nav>
+
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc" hidden>
+    <div class="modal-content">
+      <h2 id="modalTitle">Titolo messaggio</h2>
+      <p id="modalDesc">Testo del messaggio qui.</p>
+      <button id="modalClose" class="btn">Chiudi</button>
+    </div>
+  </div>
+
+  <header class="hero mini-hero scroll-anim">
+    <div class="hero-content">
+      <h1>CONTATTACI</h1>
+      <p>Scrivici per informazioni o domande su GreenBox.</p>
+    </div>
+  </header>
+
+  <section class="contact-section scroll-anim">
+    <h2 class="scroll-anim">Modulo di contatto</h2>
+    <form id="contactForm" novalidate class="scroll-anim">
+      <label for="name">Nome</label>
+      <input type="text" id="name" name="name" required placeholder="Il tuo nome" />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required placeholder="La tua email" />
+
+      <label for="message">Messaggio</label>
+      <textarea id="message" name="message" required placeholder="Scrivi qui il tuo messaggio"></textarea>
+
+      <button type="submit" class="btn">Invia</button>
+    </form>
+    <div id="formMessage" aria-live="polite" style="margin-top:1rem;"></div>
+  </section>
+
+  <section class="faq-section scroll-anim">
+    <h2 class="scroll-anim">Domande Frequenti sui Contatti</h2>
+    <div class="faq-item scroll-anim">
+      <button class="faq-question" aria-expanded="false">Come posso contattarvi?</button>
+      <div class="faq-answer" hidden>
+        Usa il modulo nella pagina contatti o scrivici via email a info@greenbox.com.
+      </div>
+    </div>
+    <div class="faq-item scroll-anim">
+      <button class="faq-question" aria-expanded="false">Quanto tempo ci vuole per ricevere una risposta?</button>
+      <div class="faq-answer" hidden>
+        Rispondiamo generalmente entro 24-48 ore lavorative.
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 GreenBox – Tutti i diritti riservati
+  </footer>
+</body>
+</html>
